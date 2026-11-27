@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "forma-design": {
+      "command": "node",
+      "args": [
+        "mcp/design-server/dist/index.js"
+      ]
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://designforge.local/schemas/design-dna.schema.json",
+  "title": "FORMA Design DNA",
+  "type": "object",
+  "required": [
+    "productName",
+    "industry",
+    "visualDirection",
+    "brandPersonality",
+    "colors",
+    "typography",
+    "spacing",
+    "grid",
+    "borders",
+    "radius",
+    "shadows",
+    "iconStyle",
+    "imageTreatment",
+    "animation",
+    "layoutArchitecture"
+  ],
+  "properties": {
+    "productName": { "type": "string" },
+    "industry": { "type": "string" },
+    "visualDirection": { "type": "string" },
+    "brandPersonality": { "type": "array", "items": { "type": "string" } },
+    "colors": {
+      "type": "object",
+      "required": ["primary", "secondary", "background", "surface", "textPrimary", "textMuted", "border", "contrastRatios"],
+      "properties": {
+        "primary": { "type": "string" },
+        "secondary": { "type": "string" },
+        "background": { "type": "string" },
+        "surface": { "type": "string" },
+        "textPrimary": { "type": "string" },
+        "textMuted": { "type": "string" },
+        "border": { "type": "string" },
+        "contrastRatios": {
+          "type": "object",
+          "properties": {
+            "textOnBackground": { "type": "number" },
+            "textOnSurface": { "type": "number" },
+            "primaryOnBackground": { "type": "number" }
+          }
+        }
+      }
+    },
+    "typography": {
+      "type": "object",
+      "required": ["displayFont", "bodyFont", "monoFont", "weights", "scale"],
+      "properties": {
+        "displayFont": { "type": "string" },
+        "bodyFont": { "type": "string" },
+        "monoFont": { "type": "string" },
+        "weights": { "type": "array", "items": { "type": "integer" } },
+        "scale": { "type": "object" }
+      }
+    },
+    "spacing": { "type": "object" },
+    "grid": { "type": "object" },
+    "borders": { "type": "object" },
+    "radius": { "type": "object" },
+    "shadows": { "type": "object" },
+    "iconStyle": { "type": "string" },
+    "imageTreatment": { "type": "string" },
+    "animation": { "type": "object" },
+    "layoutArchitecture": { "type": "object" }
+  }
+}

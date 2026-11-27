@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://designforge.local/schemas/audit.schema.json",
+  "title": "FORMA Design Audit Report",
+  "type": "object",
+  "required": ["totalScore", "breakdown", "findings", "disclaimer"],
+  "properties": {
+    "totalScore": { "type": "number", "minimum": 0, "maximum": 100 },
+    "breakdown": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["category", "weight", "score", "rationale"],
+        "properties": {
+          "category": { "type": "string" },
+          "weight": { "type": "number" },
+          "score": { "type": "number" },
+          "rationale": { "type": "string" }
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["severity", "affectedElement", "explanation", "recommendation"],
+        "properties": {
+          "severity": { "type": "string", "enum": ["critical", "major", "minor"] },
+          "affectedElement": { "type": "string" },
+          "explanation": { "type": "string" },
+          "recommendation": { "type": "string" }
+        }
+      }
+    },
+    "disclaimer": { "type": "string" }
+  }
+}

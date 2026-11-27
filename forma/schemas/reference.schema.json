@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://designforge.local/schemas/reference.schema.json",
+  "title": "FORMA Reference Inspection Record",
+  "type": "object",
+  "required": ["url", "inspectedAt", "accessible", "observations", "interpretations"],
+  "properties": {
+    "url": { "type": "string", "format": "uri" },
+    "title": { "type": "string" },
+    "industry": { "type": "string" },
+    "inspectedAt": { "type": "string", "format": "date-time" },
+    "accessible": { "type": "boolean" },
+    "statusCode": { "type": "integer" },
+    "error": { "type": "string" },
+    "observations": {
+      "type": "object",
+      "properties": {
+        "navLinkCount": { "type": "integer" },
+        "headingHierarchy": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "fontFamilies": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "colors": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "sectionCount": { "type": "integer" },
+        "svgCount": { "type": "integer" },
+        "imageCount": { "type": "integer" },
+        "hasGradientBackground": { "type": "boolean" },
+        "badgeLikeElements": { "type": "integer" }
+      }
+    },
+    "interpretations": {
+      "type": "object",
+      "properties": {
+        "heroComposition": { "type": "string" },
+        "layoutCharacter": { "type": "string" },
+        "strongDecisions": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "patternsToAvoid": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "design-forge",
+  "displayName": "Design Forge",
+  "version": "0.1.0",
+  "description": "Beyond Templates. Beyond Generic. Intelligent design research, Design DNA generation, anti-AI pattern auditing, custom SVG iconography, and visual QA for production-grade web interfaces.",
+  "logo": "assets/logo.png",
+  "homepage": "https://github.com/mehefujali/DesignForge",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mehefujali/DesignForge.git"
+  },
+  "suggestedPrompts": [
+    "Research references and create a Design DNA for my SaaS web app",
+    "Audit our landing page for generic AI patterns and layout repetition",
+    "Run a responsive visual QA pass across desktop, tablet, and mobile"
+  ],
+  "author": {
+    "name": "mehefujali"
+  }
+}
